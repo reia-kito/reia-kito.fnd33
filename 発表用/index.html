@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>もっとあそびたい🦴い～ぬ🐶🐕🐩</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+  <!-- title -->
+  <div id="title">
+      <div>
+        <img id="gameTitle" src="image/gameTilte.png">
+        <img id="titleDog" src="image/titleDog.png">
+      </div>
+      <button id="startButton">あそぶ🦴</button>
+      <button id="clear">データを削除する</button>
+  </div>
+
+  
+  <!-- select -->
+  
+  <div id="select">
+    <img id="degreeOfDifficulty" src="image/degreeOfDifficulty.png"><br>
+    <p>ルール説明：飼い主の所に行って沢山遊んでもらおう🐕難易度かいぬをクリックしてゲーム画面へ</p>
+    <table>
+      <tr>
+        <th width=20%>難易度</th><th>いぬビジュアル</th><th>説明</th>
+      </tr>
+      <tr>
+        <th><img id="easy" class="selectImgSize" src="image/easy.png"></th>
+        <th><img id="longDog" src="image/longDog.png"></th>
+        <th>胴が長いので沢山飼い主に当たれる</th>
+      </tr>
+      <tr>
+        <th><img id="normal" class="selectImgSize" src="image/normal.png"></th>
+        <th><img id="normalDog" src="image/normalDog.png"></th>
+        <th>ふつう</th>
+      </tr>
+      <tr>
+        <th><img id="difficult" class="selectImgSize" src="image/difficult.png"></th>
+        <th><img id="shortDog" src="image/shortDog.png"></th>
+        <th>飼い主に当たるのはむずかしいが遊びたい</th>
+      </tr>
+    </table>
+    <br>
+    <div>
+      <button id="selectBackButton">もどる</button>
+      <img id="cryDog">
+    </div>
+  </div>
+  
+  
+  <!-- game -->
+  <div id="game">
+    <div class="gameMenu">
+      <img id="gameDegreeOfDifficulty" src="image/easy.png">
+        <button id="gameStart">ゲーム開始ボタン</button>
+        <p class="gameFontSize">スコア:<span id="score">0</span></p>
+        <p class="gameFontSize">残り時間:<span id="time">30</span></p>
+        <p id="countdown" class="gameFontSize"></p>
+    </div>
+    <div id="gameMap">
+      <img id="gameDog" src="image/longDog.png"><br>
+      <img id="human1" src="image/human.png">
+      <img id="human2" src="image/human.png">
+    </div>
+  </div>
+
+  <!-- result -->
+  <div id="result">
+    <div>
+      <p>結果:<span id="scoreResult"></span></p>
+    </div>
+    <button id="resultBackButton">スタート画面に戻る</button>
+    <p>過去の最高得点</p>
+    <table id="resultTable">
+      <tr>
+        <th>かんたん</th>
+        <th>ふつう</th>
+        <th>むずかしい</th>
+      </tr>
+      <tr>
+        <th id="easyResult">0</th>
+        <th id="normalResult">0</th>
+        <th id="difficultResult">0</th>
+      </tr>
+    </table>
+    <img  id="resultDog1" src="image/resultDog.png">
+    <img  id="resultDog2" src="image/resultDog.png">
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
