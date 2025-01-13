@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>もっとあそびたい🦴い～ぬ🐶🐕🐩</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+  <!-- title -->
+  <div id="title">
+      <div>
+        <img id="gameTitle" src="gameTilte.png">
+        <img id="titleDog" src="titleDog.png">
+      </div>
+      <button id="startButton">あそぶ🦴</button>
+      <button id="clear">データを削除する</button>
+  </div>
+
+  
+  <!-- select -->
+  
+  <div id="select">
+    <div id="selectMenu">
+      <img id="degreeOfDifficulty" src="degreeOfDifficulty.png">
+      <h3>　　　　　ルール説明：飼い主の所に行って沢山遊んでもらおう🐕難易度かいぬをクリックしてゲーム画面へ</h3>
+    </div>
+    <table id="selectTable">
+      <tr>
+        <th class="selectTab">難易度</th><th class="selectTab">いぬビジュアル</th><th class="selectTab">説明</th>
+      </tr>
+      <tr>
+        <th class="selectTh"><img id="easy" class="selectImgSize" src="easy.png"></th>
+        <th class="selectTh"><img id="longDog" src="longDog.png"></th>
+        <th class="selectTh">胴が長いので沢山飼い主に当たれる</th>
+      </tr>
+      <tr>
+        <th class="selectTh"><img id="normal" class="selectImgSize" src="normal.png"></th>
+        <th class="selectTh"><img id="normalDog" src="normalDog.png"></th>
+        <th class="selectTh">ふつう</th>
+      </tr>
+      <tr>
+        <th class="selectTh"><img id="difficult" class="selectImgSize" src="difficult.png"></th>
+        <th class="selectTh"><img id="shortDog" src="shortDog.png"></th>
+        <th class="selectTh">飼い主に当たるのはむずかしいが遊びたい</th>
+      </tr>
+    </table>
+    <br>
+    <div>
+      <button id="selectBackButton">もどる</button>
+      <img id="cryDog">
+    </div>
+  </div>
+  
+  
+  <!-- game -->
+  <div id="game">
+    <div class="gameMenu">
+      <img id="gameDegreeOfDifficulty" src="easy.png">
+        <button id="gameStart">ゲーム開始ボタン</button>
+        <p class="gameFontSize">スコア:<span id="score">0</span></p>
+        <p class="gameFontSize">残り時間:<span id="time">10</span></p>
+        <p id="countdown" class="gameFontSize"></p>
+    </div>
+    <br>
+    <div id="gameMap">
+      <img id="gameDog" src="longDog.png"><br>
+    </div>
+  </div>
+
+  <!-- result -->
+  <div id="result">
+    <div>
+      <p>結果:<span id="scoreResult"></span></p>
+    </div>
+    <button id="resultBackButton">スタート画面に戻る</button>
+    <p>過去の最高得点</p>
+    <table id="resultTable">
+      <tr>
+        <th>かんたん</th>
+        <th>ふつう</th>
+        <th>むずかしい</th>
+      </tr>
+      <tr>
+        <th id="easyResult">0</th>
+        <th id="normalResult">0</th>
+        <th id="difficultResult">0</th>
+      </tr>
+    </table>
+    <img  id="resultDog1" src="resultDog.png">
+    <img  id="resultDog2" src="resultDog.png">
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
