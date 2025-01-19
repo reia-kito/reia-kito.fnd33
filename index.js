@@ -198,6 +198,7 @@ function threeSecond() {
       three--;
     } else if (three === 0) {
       gameImageVisible();
+      shippoImgAnimate.cancel();
       gameMap.style.backgroundColor = "white";
       body.style.backgroundColor = "#ffffd5";    
       countdownP.innerText = "飼い主に遊んでもらえ！！";
@@ -214,7 +215,7 @@ function threeSecond() {
 //いぬカウントだうん
   const ochiriImg = document.getElementById("ochiri");
   const shippoImg = document.getElementById("shippo");
-  shippoImg.animate(
+  const shippoImgAnimate = shippoImg.animate(
     [
       { transform: 'rotate(0deg)' }, 
       { transform: 'rotate(360deg)' } ,
@@ -273,6 +274,7 @@ for(let i = 1; i < 5; i++) {
   humanImage.setAttribute("src", "human.png");
   document.getElementById("gameMap").appendChild(humanImage);  
 }
+
 
 function humanWalk() {  
   if (direction1 === "rightUpper" ) {
@@ -348,6 +350,8 @@ function humanWalk() {
   document.getElementById("human2").style.left = human2X + "px"
   document.getElementById("human2").style.top = human2Y + "px"
 }
+
+
 // 飼い主上から落ちてくる
 let human3Y = 0;
 let human3X = randomNum(36) * 32;
@@ -452,9 +456,11 @@ function scoreDraw() {
 }
 
 
-const easyCollisionDetection = (humanY, humanX) => (humanY >= dogY && humanY <= (dogY + 32) && humanX >= dogX && humanX <= (dogX + 191))
+const easyCollisionDetection = (humanY, humanX) => 
+  (humanY >= dogY && humanY <= (dogY + 32) && humanX >= dogX && humanX <= (dogX + 191))
 
-const normalCollisionDetection = (humanY, humanX) => (humanY >= dogY && humanY <= dogY && humanX >= dogX && humanX <= (dogX + 95))
+const normalCollisionDetection = (humanY, humanX) => 
+  (humanY >= dogY && humanY <= dogY && humanX >= dogX && humanX <= (dogX + 95))
 
 
 function collisionDetection() {
