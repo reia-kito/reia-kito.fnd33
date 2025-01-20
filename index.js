@@ -387,7 +387,7 @@ function humanFall() {
 
 //30秒カウントダウン　30秒後飼い主ストップ、result画面へ
 //ゲーム時間だけいぬが動ける
-let time = 10;
+let time = 30;
 let walkStop;
 let fallStop;
 let countStop;
